@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Диваны оптом</title>
+</head>
+<body>
+  <div class="modal">
+    <div class="modal-container">
+      <div class="modal-close">
+        <span></span>
+        <span></span>
+      </div>
+
+      <p class="modal__title">форма</p>
+      <p class="modal__subtitle">получи ответ уже через 15 минут</p>
+
+      <form action="" class="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="впишите ваше имя" />
+
+        <label for="tel">Tel</label>
+        <input type="tel" id="tel" placeholder="+7 999 123 45 67" />
+
+        <button class="page__button form__button">отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+    <!-- <div class="swiper-wrapper" navigation="true" pagination="true" keyboard="true" mousewheel="true" css-mode="true"> -->
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <section class="main-page">
+          <h1 class="main-page__title">
+            диваны оптом
+          </h1>
+          <h2 class="main-page__subtitle">
+            надежные и современные диваны с доставкой по привлекательной цене
+          </h2>
+        </section>
+      </div>
+      <!-- цены -->
+      <div class="swiper-slide">
+        <section class="page">
+          <div class="container">
+            <h2 class="page__title">цены</h2>
+            <p class="page__description">
+              у нас более 5 своих фабрик, поэтому сможем вовремя изготовить нужное количество диванов по приятным ценам для оптовиков
+            </p>
+
+            <button class="page__button page__modal-open">
+              запросить цены
+            </button>
+          </div>
+        </section>
+      </div>
+      <!-- доставка -->
+      <div class="swiper-slide">
+        <section class="page">
+          <div class="container">
+            <h2 class="page__title">доставка</h2>
+            <p class="page__description">
+              своя курьерская служба, доставим оперативно в любую область
+            </p>
+            <ul class="page__list">
+              <li class="page__list-item">Нижегородская</li>
+              <li class="page__list-item">Ивановская</li>
+              <li class="page__list-item">Ярославская</li>
+              <li class="page__list-item">Владимирская</li>
+              <li class="page__list-item">Московская</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- диваны -->
+      <div class="swiper-slide">
+        <section class="page page-sofas">
+          <div class="container">
+            <h2 class="page__title">диваны</h2>
+            <p class="page__description">
+              у нас небольшой и востребованный ассортимент на рынке
+            </p>
+            <ul class="page__list">
+              <li class="page__list-item page__list-item_img">
+                <img class="page__img" src="img/vid-1.jpg" alt="">
+              </li>
+              <li class="page__list-item page__list-item_img">
+                <img class="page__img" src="img/vid-2.jpg" alt="">
+              </li>
+              <li class="page__list-item page__list-item_img">
+                <img class="page__img" src="img/vid-3.jpg" alt="">
+              </li>
+            </ul>
+
+            <button class="page__button page__modal-open">
+              запросить фото
+            </button>
+          </div>
+        </section>
+      </div>
+      <!-- контакты -->
+      <div class="swiper-slide">
+        <section class="page">
+          <div class="container">
+            <h2 class="page__title">контакты</h2>
+            <p class="page__description">
+              менджеры готовы ответить на все ваши вопросы
+            </p>
+
+            <div class="page__buttons">
+              <div class="page__buttons-del"></div>
+              <button class="page__button page__modal-open">
+                запросить звонок
+              </button>
+              <a class="page__button" href="tel:+79200095942">
+                +7 920 009 59 42
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="swiper-pagination">
+      1
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      cssMode: true,
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + ['главная', 'цены', 'доставка', 'диваны', 'контакты'][index] + "</span>";
+        },
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
