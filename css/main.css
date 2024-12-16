@@ -349,3 +349,131 @@ input:focus {
   padding: 13px 20px;
   margin-top: 30px;
 }
+
+.mobile-menu-button {
+  display: none;
+}
+
+@media(max-width:1240px) {
+  .container {
+    width: 800px;
+  }
+
+  .page__description {
+    margin-bottom: 70px;
+  }
+
+  .page__list-item {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .page__list-item_img {
+    height: 210px;
+  }
+}
+
+@media(max-width:840px) {
+  .container {
+    width: 500px;
+  }
+
+  .main-page__title {
+    font-size: 70px;
+  }
+
+  .page__list {
+    flex-wrap: wrap;
+  }
+
+  .page__list-item {
+    width: 30%;
+    margin-bottom: 25px;
+  }
+
+  .page__list-item_img {
+    height: 130px;
+  }
+}
+
+@media(max-width:540px) {
+  .container {
+    width: 350px;
+  }
+
+  .main-page__title {
+    font-size: 50px;
+  }
+
+  .main-page__subtitle {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page__title {
+    font-size: 70px;
+  }
+
+  .page__description {
+    width: 80%;
+  }
+
+  .page__list-item {
+    width: 47%;
+  }
+
+  .page__button {
+    width: 150px;
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+
+  .swiper-pagination {
+    flex-wrap: wrap;
+    display: none!important;
+    height: 100%;
+    z-index: 1000;
+    background-color: #1e1e1e;
+    flex-direction: column;
+  }
+
+  .swiper-pagination-show {
+    display: flex!important;
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0!important;
+    margin-bottom: 20px!important;
+    width: 70%!important;
+    padding: 25px 10px;
+  }
+
+  .mobile-menu-button {
+    z-index: 100;
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #292929;
+    color: white;
+    border: none;
+    outline: none;
+    font-family: description;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 100;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .mobile-menu-button-hide {
+    display: none;
+  }
+}
